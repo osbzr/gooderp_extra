@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="max_web_select_list_view_column assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/max_web_select_list_view_column/static/src/js/max_web_select_list_view_column.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

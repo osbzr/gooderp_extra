@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_max_web_select_list_view_column_setting,access_max_web_select_list_view_column_setting,model_max_web_select_list_view_column_setting,,1,1,1,1
