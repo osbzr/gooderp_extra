@@ -10,8 +10,8 @@
         To enable user customizing (hide or show) list view columns, also the configuration can be saved and reset.
     """,
 
-    'author': "MAXodoo",
-    'website': "http://www.maxodoo.com",
+    'author': "MAXodoo, Surekha Technologies",
+    'website': "http://www.maxodoo.com, https://www.surekhatech.com",
     'category': 'web',
     'version': '10.0.0.1',
     'depends': ['web'],
