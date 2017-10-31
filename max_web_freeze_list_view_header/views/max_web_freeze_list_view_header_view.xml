@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="max_web_freeze_list_view_header assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/max_web_freeze_list_view_header/static/lib/stickytableheaders/jquery.stickytableheaders.js"></script>
+                <script type="text/javascript" src="/max_web_freeze_list_view_header/static/src/js/max_web_freeze_list_view_header.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>
