@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <t t-name="ListView.buttons">
+        <div class="o_list_buttons">
+            <t t-if="widget.options.addable and widget.is_action_enabled('create')">
+                <button type="button" class="btn btn-primary btn-sm o_list_button_add" accesskey="c">
+                    <t t-esc="widget.options.addable"/>
+                </button>
+            </t>
+            <button type="button" class="btn btn-primary btn-sm o_list_button_save" accesskey="s">
+                Save
+            </button>
+            <button type="button" class="btn btn-default btn-sm o_list_button_discard" accesskey="j">
+                Discard
+            </button>
+            <button name="oe_select_columns" type="button" id="select_columns"
+                    class="btn btn-sm btn-default oe_select_columns" data-toggle="dropdown">
+                Columns
+                <span class="caret" style="margin:3px"></span>
+            </button>
+            <ul id="showcb" class="oe_dropdown_menu"
+                style="max-height:250px; overflow:auto; min-width: 200px; z-index:5;">
+                <li style="display:inline-block">
+                    <button name="apply" id="apply" class="oe_apply_btn btn btn-sm btn-primary">Apply</button>
+                    <button name="reset" id="reset" class="oe_reset_btn btn btn-sm btn-default">Reset</button>
+                </li>
+            </ul>
+        </div>
+    </t>
+</templates>
