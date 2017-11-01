@@ -1,0 +1,446 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tko_web_sessions_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-04 15:07+0000\n"
+"PO-Revision-Date: 2017-05-08 22:38+0800\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
+
+#. module: tko_web_sessions_management
+#: code:addons/tko_web_sessions_management/main.py:168
+#, python-format
+msgid "- User not allowed to have multiple logins"
+msgstr "- 不允许用户有多个登录 "
+
+#. module: tko_web_sessions_management
+#: code:addons/tko_web_sessions_management/main.py:170
+#, python-format
+msgid "- User not allowed to login at this specific time or day"
+msgstr "- 用户不允许在特定的时间或日期登录 "
+
+#. module: tko_web_sessions_management
+#: code:addons/tko_web_sessions_management/main.py:167
+#, python-format
+msgid "- Wrong login/password"
+msgstr "- 错误登录密码 "
+
+#. module: tko_web_sessions_management
+#: model:ir.model,name:tko_web_sessions_management.model_res_groups
+msgid "Access Groups"
+msgstr "访问组"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_users_alias
+msgid "Alias"
+msgstr "别名"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_groups_login_calendar_id
+msgid "Allow Login Calendar"
+msgstr "允许登陆时间"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_users_login_calendar_id
+msgid "Allowed Login Calendar"
+msgstr "允许登陆时间"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_multiple_sessions_block
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_groups_multiple_sessions_block
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_users_multiple_sessions_block
+msgid "Block Multiple Sessions"
+msgstr "锁定会话"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Block Multisessions"
+msgstr "锁定会话"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Can Open Multiple Session"
+msgstr "不能打开多个会话"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Can't Open Multiple Sessions"
+msgstr "不能打开多个会话"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_form
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_tree
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_users_form
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_users_form_simple_modif
+msgid "Close Session"
+msgstr "关闭会话 "
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,help:tko_web_sessions_management.field_res_users_alias
+msgid "Common name that the Party is referred"
+msgstr "当事人所指的共同名称 "
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: tko_web_sessions_management
+#: selection:res.groups,interval_type:0 selection:res.users,interval_type:0
+msgid "Days"
+msgstr "天"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_groups_interval_number
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_users_interval_number
+msgid "Default Session Duration"
+msgstr "会话超时"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_users_form_simple_modif
+msgid "Email Preferences"
+msgstr "Email首选项"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_expiration_date
+msgid "Expiration Date"
+msgstr "到期时间"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Filter by Login State"
+msgstr "通过登录状态过滤"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Filter by Multiple Session"
+msgstr "多会话过滤 "
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Group By"
+msgstr "分组"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_groups_tree
+msgid "Groups"
+msgstr "群组"
+
+#. module: tko_web_sessions_management
+#: selection:res.groups,interval_type:0 selection:res.users,interval_type:0
+msgid "Hours"
+msgstr "小时"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_id
+msgid "ID"
+msgstr "ID"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_ip_location
+msgid "IP Location"
+msgstr "IP位置"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_users_id_numbers
+msgid "Identification Numbers"
+msgstr "识别号 "
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_groups_interval_type
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_users_interval_type
+msgid "Interval Unit"
+msgstr "间隔单位"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Kill User"
+msgstr "断开用户"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_user_kill_id
+msgid "Killed by"
+msgstr "断开"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_users_ip
+msgid "Latest ip adress"
+msgstr "最后连接"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Logged"
+msgstr "登录"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_logged_in
+msgid "Logged in"
+msgstr "登入"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_date_login
+msgid "Login"
+msgstr "登录"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_groups_form
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_users_form
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_users_form_simple_modif
+msgid "Login Calendar"
+msgstr "登录日历"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Login Date"
+msgstr "登陆日期"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Login State"
+msgstr "登入状态"
+
+#. module: tko_web_sessions_management
+#: code:addons/tko_web_sessions_management/main.py:166
+#, python-format
+msgid "Login failed due to one of the following reasons:"
+msgstr "由于下列原因之一，登录失败："
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_date_logout
+msgid "Logout"
+msgstr "注销"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Logout Date"
+msgstr "登出如期"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_logout_type
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Logout Type"
+msgstr "登出方式"
+
+#. module: tko_web_sessions_management
+#: selection:res.groups,interval_type:0 selection:res.users,interval_type:0
+msgid "Minutes"
+msgstr "分钟"
+
+#. module: tko_web_sessions_management
+#: selection:res.groups,interval_type:0 selection:res.users,interval_type:0
+msgid "Months"
+msgstr "月"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Not Logged"
+msgstr "不记录 "
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_users_patient_ids
+msgid "Related Patients"
+msgstr "相关的患者 "
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_ip
+msgid "Remote IP"
+msgstr "用户IP"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_remote_tz
+msgid "Remote Time Zone"
+msgstr "远程时区 "
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,help:tko_web_sessions_management.field_res_users_multiple_sessions_block
+msgid "Select this to prevent user to start more than one session."
+msgstr "选择此项以防止用户启动多个会话。"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,help:tko_web_sessions_management.field_res_groups_multiple_sessions_block
+msgid "Select this to prevent users of this group to start more than one session."
+msgstr "选择此项以防止该组的用户启动多个会话。 "
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_session_duration
+msgid "Session Duration"
+msgstr "会话持续时间 "
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_session_id
+msgid "Session ID"
+msgstr "Session ID"
+
+#. module: tko_web_sessions_management
+#: selection:ir.sessions,logout_type:0
+msgid "Session Killed"
+msgstr "会话关闭"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_users_session_default_seconds
+msgid "Session Seconds"
+msgstr "会话秒"
+
+#. module: tko_web_sessions_management
+#: selection:ir.sessions,logout_type:0
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_groups_form
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_users_form
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_users_form_simple_modif
+msgid "Session Timeout"
+msgstr "会话超时"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_session_seconds
+msgid "Session duration in seconds"
+msgstr "会话持续时间"
+
+#. module: tko_web_sessions_management
+#: model:ir.actions.act_window,name:tko_web_sessions_management.ir_session_action
+#: model:ir.model,name:tko_web_sessions_management.model_ir_sessions
+#: model:ir.ui.menu,name:tko_web_sessions_management.ir_session_menu
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_graph
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_users_form
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_users_form_simple_modif
+msgid "Sessions"
+msgstr "会话"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,help:tko_web_sessions_management.field_res_groups_login_calendar_id
+msgid ""
+"The user will be only allowed to login in the calendar defined here.\n"
+"NOTE: The users will be allowed to login using a merge/union of all calendars to wich one belongs."
+msgstr ""
+"用户只允许在此处定义的日历中登录。 \n"
+"注：用户将允许登录使用合并/联盟的所有日历属于一个属于。"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,help:tko_web_sessions_management.field_res_users_login_calendar_id
+msgid ""
+"The user will be only allowed to login in the calendar defined here.\n"
+"NOTE:The calendar defined here will overlap all defined in groups."
+msgstr ""
+"用户只允许在此处定义的日历中登录。 \n"
+"注意：这里定义的日历将重叠所有定义的组。"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,help:tko_web_sessions_management.field_res_groups_interval_number
+msgid ""
+"This define the timeout for the users of this group.\n"
+"NOTE: The system will get the lowest timeout of all user groups."
+msgstr ""
+"定义此组用户的超时时间。 \n"
+"注意：系统将获得所有用户组的最低超时时间。"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,help:tko_web_sessions_management.field_res_users_interval_number
+msgid ""
+"This is the timeout for this user.\n"
+"NOTE: The timeout defined here will overlap all the timeouts defined in groups."
+msgstr ""
+"这是该用户的超时时间。 \n"
+"注：超时定义重叠所有超时定义组。 "
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_unsuccessful_message
+msgid "Unsuccessful"
+msgstr "失败"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_ir_sessions_user_id
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "User"
+msgstr "用户"
+
+#. module: tko_web_sessions_management
+#: selection:ir.sessions,logout_type:0
+msgid "User Logout"
+msgstr "用户注销"
+
+#. module: tko_web_sessions_management
+#: model:ir.model.fields,field_description:tko_web_sessions_management.field_res_users_session_ids
+msgid "User Sessions"
+msgstr "用户会话"
+
+#. module: tko_web_sessions_management
+#: model:ir.model,name:tko_web_sessions_management.model_res_users
+msgid "Users"
+msgstr "用户"
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Users that can login in multiple sessions"
+msgstr "可以在多个会话中登录的用户 "
+
+#. module: tko_web_sessions_management
+#: model:ir.ui.view,arch_db:tko_web_sessions_management.view_sesssions_search
+msgid "Users that can't open multiple sessions"
+msgstr "不能打开多个会话的用户"
+
+#. module: tko_web_sessions_management
+#: selection:res.groups,interval_type:0 selection:res.users,interval_type:0
+msgid "Weeks"
+msgstr "周"
+
+#. module: tko_web_sessions_management
+#: selection:res.groups,interval_type:0 selection:res.users,interval_type:0
+msgid "Work Days"
+msgstr "工作日"
+
+#. module: tko_web_sessions_management
+#: code:addons/tko_web_sessions_management/main.py:139
+#, python-format
+msgid "unsuccessful login from '%s', multisessions block defined in group '%s'"
+msgstr ""
+
+#. module: tko_web_sessions_management
+#: code:addons/tko_web_sessions_management/main.py:148
+#, python-format
+msgid "unsuccessful login from '%s', multisessions block defined in user"
+msgstr ""
+
+#. module: tko_web_sessions_management
+#: code:addons/tko_web_sessions_management/main.py:144
+#, python-format
+msgid "unsuccessful login from '%s', user time out of allowed calendar defined in group '%s'"
+msgstr "“%s”的登录失败，用户的时间超出了“%s”中定义的允许的日历 "
+
+#. module: tko_web_sessions_management
+#: code:addons/tko_web_sessions_management/main.py:152
+#, python-format
+msgid "unsuccessful login from '%s', wrong username or password"
+msgstr "“%s”登录失败，用户名或密码错误 "
