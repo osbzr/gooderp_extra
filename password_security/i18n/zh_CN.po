@@ -1,0 +1,248 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * password_security
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-22 00:55+0000\n"
+"PO-Revision-Date: 2017-05-26 18:03+0800\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/oca/"
+"teams/23907/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.8\n"
+
+#. module: password_security
+#: model:ir.model.fields,help:password_security.field_res_company_password_minimum
+msgid "Amount of hours until a user may change password again"
+msgstr "用户可以再次更改密码的小时数"
+
+#. module: password_security
+#: code:addons/password_security/models/res_users.py:145
+#, python-format
+msgid "Cannot use the most recent %d passwords"
+msgstr "无法使用最新的%d 密码"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_company_password_length
+msgid "Characters"
+msgstr "字符"
+
+#. module: password_security
+#: model:ir.model,name:password_security.model_res_company
+msgid "Companies"
+msgstr "公司"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_pass_history_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_pass_history_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_pass_history_date
+msgid "Date"
+msgstr "日期"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_company_password_expiration
+msgid "Days"
+msgstr "日"
+
+#. module: password_security
+#: model:ir.model.fields,help:password_security.field_res_company_password_history
+msgid ""
+"Disallow reuse of this many previous passwords - use negative number for "
+"infinite, or 0 to disable"
+msgstr "不允许重用此以前的密码 - 使用负数为无限，或0禁用"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_pass_history_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_pass_history_password_crypt
+msgid "Encrypted Password"
+msgstr "加密密码"
+
+#. module: password_security
+#: model:ir.ui.view,arch_db:password_security.view_company_form
+msgid "Extra"
+msgstr "额外的"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_company_password_history
+msgid "History"
+msgstr "历史"
+
+#. module: password_security
+#: model:ir.model.fields,help:password_security.field_res_company_password_expiration
+msgid "How many days until passwords expire"
+msgstr "直到密码过期为止"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_pass_history_id
+msgid "ID"
+msgstr "ID"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_pass_history___last_update
+msgid "Last Modified on"
+msgstr "最后修改时间"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_pass_history_write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_pass_history_write_date
+msgid "Last Updated on"
+msgstr "上次更新日期"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_password_write_date
+msgid "Last password update"
+msgstr ""
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_company_password_lower
+msgid "Lowercase"
+msgstr "小写"
+
+#. module: password_security
+#: code:addons/password_security/models/res_users.py:51
+#, python-format
+msgid "Lowercase letter"
+msgstr "小写字母"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_company_password_minimum
+msgid "Minimum Hours"
+msgstr "最短时间"
+
+#. module: password_security
+#: model:ir.model.fields,help:password_security.field_res_company_password_length
+msgid "Minimum number of characters"
+msgstr "最小字符数"
+
+#. module: password_security
+#: code:addons/password_security/models/res_users.py:59
+#, python-format
+msgid "Must contain the following:"
+msgstr "必须包含以下内容："
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_company_password_numeric
+msgid "Numeric"
+msgstr "数字"
+
+#. module: password_security
+#: code:addons/password_security/models/res_users.py:55
+#, python-format
+msgid "Numeric digit"
+msgstr "数字位数"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_password_history_ids
+msgid "Password History"
+msgstr "密码历史记录"
+
+#. module: password_security
+#: model:ir.ui.view,arch_db:password_security.view_company_form
+msgid "Password Policy"
+msgstr "密码策略"
+
+#. module: password_security
+#: code:addons/password_security/models/res_users.py:62
+#, python-format
+msgid "Password must be %d characters or more."
+msgstr "密码必须为%d个字符以上。"
+
+#. module: password_security
+#: code:addons/password_security/models/res_users.py:121
+#, python-format
+msgid ""
+"Passwords can only be reset every %d hour(s). Please contact an "
+"administrator for assistance."
+msgstr "密码只能在每%d小时重置。 请联系管理员以获得帮助。"
+
+#. module: password_security
+#: model:ir.model.fields,help:password_security.field_res_company_password_lower
+msgid "Require lowercase letters"
+msgstr "需要小写字母"
+
+#. module: password_security
+#: model:ir.model.fields,help:password_security.field_res_company_password_numeric
+msgid "Require numeric digits"
+msgstr "需要数字"
+
+#. module: password_security
+#: model:ir.model.fields,help:password_security.field_res_company_password_special
+msgid "Require special characters"
+msgstr "需要特殊字符"
+
+#. module: password_security
+#: model:ir.model.fields,help:password_security.field_res_company_password_upper
+msgid "Require uppercase letters"
+msgstr "需要大写字母"
+
+#. module: password_security
+#: model:ir.ui.view,arch_db:password_security.view_company_form
+msgid "Required Characters"
+msgstr "必填字符"
+
+#. module: password_security
+#: model:ir.model,name:password_security.model_res_users_pass_history
+msgid "Res Users Password History"
+msgstr "Res用户密码历史记录"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_company_password_special
+msgid "Special"
+msgstr "符号"
+
+#. module: password_security
+#: code:addons/password_security/models/res_users.py:57
+#, python-format
+msgid "Special character"
+msgstr "特殊字符"
+
+#. module: password_security
+#: model:ir.ui.view,arch_db:password_security.view_company_form
+msgid "Timings"
+msgstr "计时"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_company_password_upper
+msgid "Uppercase"
+msgstr "大写"
+
+#. module: password_security
+#: code:addons/password_security/models/res_users.py:53
+#, python-format
+msgid "Uppercase letter"
+msgstr "大写字母"
+
+#. module: password_security
+#: model:ir.model.fields,field_description:password_security.field_res_users_pass_history_user_id
+msgid "User"
+msgstr "用户"
+
+#. module: password_security
+#: model:ir.model,name:password_security.model_res_users
+msgid "Users"
+msgstr "用户"
