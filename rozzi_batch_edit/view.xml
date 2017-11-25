@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <record model='ir.ui.view' id='rozzi_batch_edit_wizard_form'>
+            <field name='name'>rozzi.batch.edit.wizard.form</field>
+            <field name='model'>rozzi.batch.edit.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='批量修改向导'>
+                    <sheet>
+                    <div><h3>本模块只用于演示，请慎用，作者不承担任何责任</h3></div>
+                    <div>请从右侧中选择要修改的字段，不提供1对多、多对1等关联类型字段的修改！</div>
+
+                            <group>
+                                <group>
+
+                                <field name="lines" readonly="1"/>
+                                <field name="name"  readonly="1"/>
+                                <field name="ttype"  readonly="1"/>
+
+
+                                <field name="set_value"  attrs="{'invisible': [('ttype', 'not in', ['integer','float','char','text'])]}"/>
+
+                                <field name="set_value_selection" domain="[('field_name','=',field_name)]" context="{'model':name,'field_name':field_name}"  options="{'no_create': True,'no_open': True}" attrs="{'invisible': [('ttype', 'not in', ['selection'])]}"/>
+                      
+                                <field name="set_value_many2one" domain="[('field_name','=',field_name)]" context="{'model':name,'field_name':field_name}"  options="{'no_create': True,'no_open': True}" attrs="{'invisible': [('ttype', 'not in', ['many2one'])]}"/>
+
+                                <field name="set_value_datetime"  attrs="{'invisible': [('ttype', 'not in', ['date','datetime'])]}"/>
+
+                                <field name="set_value_bool"  attrs="{'invisible': [('ttype', 'not in', ['boolean'])]}"/>
+                                
+                                </group>
+                                <group>
+    
+                                <field name="field_name"  domain="[('model','=',name),('ttype','not in',['one2many','many2many','binary'])]" widget="radio"/>
+                                </group>
+                            </group>
+                                    
+                            
+                    </sheet>
+                    <footer>
+                        <button name='confirm' string='确认修改'
+                            class='oe_highlight'
+                            type='object'
+
+                            />
+
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                        
+
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+         <act_window id="action_batch_edit" res_model="rozzi.batch.edit.wizard"   src_model="rozzi.empty"
+            target="new" multi="True" key2="client_action_multi" view_mode="form" name="罗子批量修改"/>
+
+          
+    </data>
+</openerp>
