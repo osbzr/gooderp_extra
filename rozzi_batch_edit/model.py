@@ -22,13 +22,14 @@ class ir_values(models.Model):
 
         #如果是'rozzi.empty'，直接返回,防死循环
         if model!='rozzi.empty':
-            if action_slot=='client_action_multi':
+            if self.env['res.users'].has_group('rozzi_batch_edit.group_batch_edit_user'):  
+                if action_slot=='client_action_multi':
            
-                ir_values_obj = self.env['ir.values']
-                resaction = ir_values_obj.get_actions('client_action_multi', 'rozzi.empty')
+                    ir_values_obj = self.env['ir.values']
+                    resaction = ir_values_obj.get_actions('client_action_multi', 'rozzi.empty')
 
 
-                res=res+ resaction
+                    res=res+ resaction
 
 
         return res

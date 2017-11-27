@@ -13,7 +13,8 @@
         'web',
     ],
     'data': [
-        'view.xml'
+        'view.xml',
+        'security/security.xml'
     ],
     'qweb': [
         
