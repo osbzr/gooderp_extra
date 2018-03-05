@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+<t t-name="AddPrintViewMain">
+        <div class="oe_form_dropdown_section btn-group btn-group-sm">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                        打印页面
+                        <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li class="oe_sidebar_print_view" style="padding:5px">
+                    <span style="cursor:pointer !important; padding: 1px 10px;">   罗子Web打印</span>
+                </li>
+
+                <li class="oe_sidebar_expand_group" style="padding:5px">
+                    <span style="cursor:pointer !important; padding: 1px 10px;">   展开Group</span>
+                </li>
+
+                <li class="oe_sidebar_collapse_group" style="padding:5px">
+                    <span style="cursor:pointer !important; padding: 1px 10px;">   收缩Group</span>
+                </li>
+            </ul>
+
+        </div>
+
+</t>
+
+<t t-name="AddExport">
+            <button class="btn btn-sm oe_highlight oe_export_table" type="button" >
+                        导出
+            </button>
+</t>
+</templates>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+        <template id="assets_backend" name="jerry_web_print_view assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/css"  href="/jerry_web_print_view/static/src/css/print_select.css" />
+                <script type="text/javascript" src="/jerry_web_print_view/static/src/js/web_print_view.js"></script>
+
+            </xpath>
+        </template>
+    </data>
+</openerp>
