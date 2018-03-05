@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Include JS file for the custom view to select domain from filters -->
+        <template id="assets_backend" name="web_menu_hide" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/web_menu_hide/static/src/js/web_menu_hide.js"></script>
+                <link rel="stylesheet"  href="/web_menu_hide/static/src/css/web_menu_hide.css"></link>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>

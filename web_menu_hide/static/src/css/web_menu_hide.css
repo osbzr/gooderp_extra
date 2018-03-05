@@ -1,0 +1,18 @@
+
+.web_hide_show
+{
+    background-image: url("/web_menu_hide/static/src/img/show_hide_gray.png");
+    background-size: 17px 17px;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background-position: left center;
+    margin-top: 10px !important;
+    background-repeat: no-repeat;
+}
+
+.web_hide_show:hover
+{
+    background-image: url("/web_menu_hide/static/src/img/show_hide.png");
+    background-size: 17px 17px;
+}
