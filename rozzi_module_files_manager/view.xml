@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <record model='ir.ui.view' id='rozzi_ir_module_view_add_files_manager'>
+            <field name='name'>add files manager tab</field>
+            <field name='model'>ir.module.module</field>
+            <field name="inherit_id" ref="base.module_form"/>
+        
+            <field name='arch' type='xml'>
+                <xpath expr='//notebook' position="inside">
+                    <page string="Files Manager">
+
+                       <div id="header" > 
+                         <table width="100%">
+                         <tr>
+                         </tr>
+                         <tr>
+                         <td>
+                            <div id="div_m">
+                               <field name="name" class="div_m"/>
+                            </div>
+
+                            <!--
+
+                            <input id="module_name" type="text"  style="width: 200px;" disabled="1" />
+
+                            -->
+                           
+                         </td>
+                         <td>
+                           <span>FileName:</span>
+                           <select id="file_name" name="file_name" class="file_name">
+            
+                                        <option value="init.py">
+                                            init.py
+                                        </option>
+                            </select>
+                         
+                            <input type="button" class="btn btn-sm oe_button btn btn-primary" value="Refresh" onclick="get_file_list()" >
+        
+                               
+                            </input>
+                         </td>
+
+                         <td>
+                            <input type="button" class="btn btn-sm oe_button btn btn-primary" value="Read" onclick="read_file()" >
+        
+                               
+                            </input>
+                         </td>
+                            
+                         <td>
+                            <input type="button" class="btn btn-sm oe_button btn btn-primary"  value="Save" onclick="save_file()" >
+        
+                            </input>
+                          
+                         </td>  
+
+                         <td>
+
+
+                            <span>Language:</span>
+                            <select id="file_type" name="file_type" class='language-picker'>
+            
+                                       
+                            </select>
+                           
+                         </td>
+                         
+                         </tr>
+
+                         <tr>
+                         </tr>
+                         </table>
+
+
+                            
+
+                          
+                       </div> 
+                       <div >
+                          Tips: try to  input 'oo'
+					  </div>
+
+                      <div class="loading editor" style="display: none;">
+							<div class="progress progress-striped active">
+								<div class="bar"></div>
+							</div>
+					  </div>
+                      <div id="container" style="height:600px;border:0px solid grey"></div>  
+                      <link rel="stylesheet" href="/rozzi_monaco_editor/static/src/js/monaco/min/vs/editor/editor.main.css"/>
+                      <script type="text/javascript" src="/rozzi_monaco_editor/static/src/js/monaco/min/vs/loader.js"></script>
+                      <!--
+                      <script src="/rozzi_monaco_editor/static/src/js/monaco/min/vs/editor/editor.main.nls.js"></script>
+	                  <script src="/rozzi_monaco_editor/static/src/js/monaco/min/vs/editor/editor.main.js"></script>
+                      
+                      
+                      <script type="text/javascript" src="/rozzi_monaco_editor/static/src/js/editor_init.js"></script>
+                      -->
+                      <script type="text/javascript" src="/rozzi_module_files_manager/static/src/js/init.js"></script>
+                      
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+          
+    </data>
+</openerp>
