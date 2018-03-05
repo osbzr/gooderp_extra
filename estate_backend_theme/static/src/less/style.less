@@ -1,0 +1,265 @@
+
+//theme
+.navbar-inverse-komnas {
+  background-color: @navbar-inverse-komnas;
+  border-color: @navbar-inverse-border-komnas;
+}
+
+.navbar-inverse-komwil {
+  background-color: @navbar-inverse-komwil;
+  border-color: @navbar-inverse-border-komwil;
+
+}
+
+.navbar-inverse-komda {
+  background-color: @navbar-inverse-komda;
+  border-color: @navbar-inverse-border-komda;
+}
+
+.navbar-inverse-bumn {
+  background-color: @navbar-inverse-bumn;
+  border-color: @navbar-inverse-border-bumn;
+}
+
+.navbar-inverse-ukm {
+  background-color: @navbar-inverse-ukm;
+  border-color: @navbar-inverse-border-ukm;
+}
+
+// Put Loading indicator in the right bottom of the screen
+.o_web_client .odoo .oe_loading {
+    background-color: darken(@navbar-inverse-komnas, 13.5%) !important;
+    top: inherit;
+    bottom: 0;
+    right: 0;
+    padding: 5px 50px;
+    border-radius: 0 !important;
+    opacity: 0.8;
+}
+// Left Menu Bar =========================================
+
+// Toggle left menu bar
+.ul_toggle_leftmenu {
+    padding-left: 0px;
+    list-style: outside none none;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: outside;
+    margin-bottom: 0px !important;
+    max-width: 300px;
+}
+.toggle_leftmenu {
+    color: #FFF !important;
+    padding: 14px 14px;
+}
+.toggle_leftmenu:hover {
+    color: #FFF !important;
+    cursor: pointer;
+    background-color: darken(@brand-info, 13.5%);
+}
+
+// Change font & color leftbar
+.odoo .oe_leftbar .oe_secondary_menus_container {
+    font-family: Ubuntu;
+}
+
+.odoo .oe_secondary_menu_section {
+    color: @brand-primary;
+}
+
+.odoo .oe_secondary_menu_section > .oe_menu_leaf {
+    color: @brand-primary;
+}
+
+.odoo .nav-pills > li.active > a, .odoo a.list-group-item.active > a {
+    background-color: @brand-primary !important;
+}
+
+// White background
+.odoo .oe_leftbar {
+    background: #ffffff none repeat scroll 0 0 !important;
+}
+
+// Leftbar notifications
+.odoo .badge {
+    background-color: @brand-primary;
+}
+
+// Navbar =========================================
+#oe_main_menu_navbar {
+    .box-shadow(0px 0px 8px #666666);
+    border: none;
+    .navbar-collapse {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+#oe_main_menu_navbar,
+.navbar-nav {
+    li {
+        a, button {
+            font-size: 14px !important;
+            padding: 14px 10px !important;
+            margin-top: 0 !important;
+            line-height: 21px !important;
+        }
+    }
+    .dropdown-menu {
+        li {
+            a, button {
+                padding: 4px 10px !important;
+                font-size: 13px !important;
+			}
+        }
+    }
+}
+
+// Align green progress indicator
+#oe_main_menu_navbar .o_planner_systray > .progress {
+    margin-top: 18px !important;
+}
+
+// Make formwidth relative to screen
+.o_form_view .o_form_sheet_bg .o_form_sheet {
+    max-width: 90% !important;
+}
+
+.o_form_view .o_form_sheet_bg .o_form_field.o_form_field_many2one .o_external_button {
+    padding: 0;
+    margin-left: 2px;
+    font-size: 19px;
+    color: @brand-logo;
+    border: none;
+    background-color: transparent;
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.o_form_view .o_form_sheet_bg .o_form_required.o_form_input, .o_form_view .o_form_sheet_bg .o_form_required .o_form_input, .o_form_view .o_form_sheet_bg .o_form_required.o_form_textarea, .o_form_view .o_form_sheet_bg .o_form_required .o_form_textarea, .o_form_view .o_form_required .o_form_input{
+    background-color: #D0CCC8;
+}
+
+.o_form_view .o_form_field.o_form_field_many2one .o_external_button {
+    color: #CD9960;
+}
+
+.o_form_view .o_form_sheet_bg .o_form_required {
+    &.o_form_input, .o_form_input, &.o_form_textarea, .o_form_textarea {
+        background-color: @brand-required;
+    }
+}
+
+.o_form_view .o_form_sheet_bg .oe_button_box .oe_stat_button .o_button_icon{
+	color: @brand-primary;
+}
+
+.o_form_view .o_form_sheet_bg .oe_button_box .oe_stat_button .o_stat_info .o_stat_value{
+	color: darken(@brand-logo, 13.5%) !important;
+}
+
+
+.o_web_client .o_main .o_sub_menu .o_sub_menu_content .oe_secondary_menu .oe_secondary_menu_section{
+	color: @brand-success;
+}
+
+a {
+    color: @brand-success;
+    &:hover {
+        color: darken(@brand-success, 5%);
+    }
+}
+
+.o_control_panel .breadcrumb{
+        font-size: 18px;
+        margin: 0px;
+        > li > a {
+            color: darken(@brand-logo, 13.5%) !important;
+            cursor: pointer;
+            &:hover {
+                color: darken(@brand-logo, 30.5%) !important;
+                text-decoration: none;
+            }
+        }
+}
+
+.o_form_view .o_form_sheet_bg .o_horizontal_separator{
+	color: @brand-primary;
+}
+
+.o_form_view .o_form_sheet_bg , ul.oe_form_status {
+        li.oe_active {
+            .o-vertical-gradient(lighten(@brand-logo, 5%), darken(@brand-logo, 20%))!important;
+            > .arrow span {
+                .o-skew-gradient(lighten(@brand-logo, 5%), darken(@brand-logo, 20%))!important;
+            }
+        }
+}
+// Explorer 11 fix to use fullscreen
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.oe-view-manager-view-kanban, .oe-view-manager-view-form, .oe-view-manager-view-list, .oe-view-manager-view-calendar, .oe-view-manager-view-pivot, .oe-view-manager-view-graph {
+        width: 100% !important;
+	}
+	// Fix user preference height
+	.modal .modal-content .modal-body .oe-view-manager-content {
+		position: static;
+		height: 400px;
+	}
+	// Fix salesboard width
+	.oe-view-manager-view-sales_team_dashboard {
+		width: 100%;
+	}
+}
+
+.o_mail_chat .o_mail_annoying_notification_bar {
+    background-color: #5FCEC0;
+}
+    
+.o_tooltip {
+    border: 2px solid @tooltip-o-tip-color;
+    background-color: @tooltip-o-tip-color;
+}
+
+.o_tooltip.top::before {
+    border-top-color: @tooltip-o-tip-color;
+}
+.o_tooltip.right::before {
+    border-right-color: @tooltip-o-tip-color;
+}
+.o_tooltip.left::before {
+    border-left-color: @tooltip-o-tip-color;
+}
+.o_tooltip.active.bottom::before {
+    border-bottom-color: @tooltip-o-tip-color;
+}
+.o_tooltip.active.top::before {
+    border-top-color: @tooltip-o-tip-color;
+}
+.o_tooltip.active.right::before {
+    border-right-color: @tooltip-o-tip-color;
+}
+.o_tooltip.active.left::before {
+    border-left-color: @tooltip-o-tip-color;
+}
+.o_tooltip.bottom::before {
+    border-bottom-color: @tooltip-o-tip-color;
+}
+.o_tooltip::after {
+    border-color: @tooltip-o-tip-color;
+    background: radial-gradient(lighten(@tooltip-o-tip-color, 7%), @tooltip-o-tip-color);
+}
+
+.breadcrumb > .active {
+    color: #CC985F;
+}
+.o_loading {
+    background-color: #663300;
+}
+
+.alert-info {
+    background-color: #816447;
+    border-color: #663300;
+    color: #ffffff;
+}
