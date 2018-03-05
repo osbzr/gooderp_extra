@@ -1,0 +1,113 @@
+[
+ 
+    {
+      "documentation":  "Create New Odoo Object",
+      "label": "oo_new_module",
+      "insertText": "# -*- encoding: utf-8 -*-\n# © 2017 Jerry Rozzi, 410881525@qq.com \n# © 2017 Csfinox.cn # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).\n\nfrom odoo import api, fields, models\n\n\nclass $NewModule(models.Model):\n\t_name = '$module.name'\n\t_rec_name = '$module.rec_name' # optional\n\t_description = '$Module description'\n\t_order = '$field1, $field2, ' # optional\n\n\tname = fields.Char()"
+    },
+    {
+      "documentation":  "Inherit/Extend Existing Odoo Object",
+      "label": "oo_object_inherit",
+      "insertText": "class $NewModule(models.Model):\n\t_name = '$module.name' # optional\n\t_inherit = '$module.name'\n\n\tname = fields.Char()"
+    },
+    {
+      "documentation":  "Integer Field",
+      "label": "oo_field_integer",
+      "insertText": "new_field = fields.Integer(string=\"Field_name\", )"
+    },
+     {
+      "documentation":  "Float Field",
+      "label": "oo_field_float",
+      "insertText": "new_field = fields.Float(string=\"Field_name\", )"
+    },
+    {
+      "documentation":  "Char Field",
+      "label": "oo_field_char",
+      "insertText": "new_field = fields.Char(string=\"Field_name\", )"
+    },
+    {
+      "documentation":   "Text Field",
+      "label": "oo_field_text",
+      "insertText": "new_field = fields.Text(string=\"Field_name\", )"
+    },
+     {
+      "documentation":  "Many2one Field",
+      "label": "oo_field_many2one",
+      "insertText": "$new_field_id = fields.Many2one(\n\tstring=\"$Field_name\",\n\tcomodel_name=\"$res.partner\",\n\tdomain=\"[('$field', '$:=', $other)]\",\n\tcontext={\"$key\": \"value\"\\},\n\tondelete=\"set null\",\n\thelp=\"Explain your field.\",\n)$80"
+    },
+    {
+      "documentation":  "One2many Field",
+      "label": "oo_field_one2many",
+      "insertText": "new_field_ids = fields.One2many(\n\tstring=\"$Field_name}\",\n\tcomodel_name=\"$res.partner}\",\n\tinverse_name=\"$inverse_name_id}\",\n\tdomain=\"[('$field', '${51:=}', ${52:other})]\",\n\tcontext={\"$key}\": ${61:\"value\"}\\},\n\thelp=\"Explain your field.\",\n)$80"
+    },
+     {
+      "documentation":  "Many2many Field",
+      "label": "oo_field_many2many",
+      "insertText": "new_field_ids = fields.Many2many(\n\tstring=\"$Field_name}\",\n\tcomodel_name=\"$res.partner}\",\n\trelation=\"$relation_table_name}\",\n\tcolumn1=\"$column_this}\",\n\tcolumn2=\"$column_other}\",\n\tdomain=\"[('field', '=', $other)]\",\n\tcontext={\"$key}\":\"value\"\\},\n\thelp=\"$Explain your field.\",\n)$100"
+    },
+     {
+      "documentation":  "Boolean Field",
+      "label": "oo_field_boolean",
+      "insertText": "is_new_field = fields.Boolean(string=\"Field_name\", )"
+    },
+     {
+      "documentation":  "HTML Field",
+      "label": "oo_field_html",
+      "insertText": "new_field = fields.HTML(string=\"Field_name\", )"
+    },
+     {
+      "documentation":  "Date Field",
+      "label": "oo_field_date",
+      "insertText": "new_field = fields.Date(string=\"Field_name\", )"
+    },
+     {
+      "documentation":  "DateTime Field",
+      "label": "oo_field_datetime",
+      "insertText": "new_field = fields.Datetime(string=\"Field_name\", )"
+    },
+     {
+      "documentation":  "Selection Field",
+      "label": "oo_field_selection",
+      "insertText": "new_field = fields.Selection(\n\tstring=\"Field_name\",\n\tselection=[\n\t\t\t('$value1}', '$description1'),\n\t\t\t('$value2', '$description2'),\n\t],$40\n)$50"
+    },
+     {
+      "documentation":  "Binary Field",
+      "label": "oo_field_binary",
+      "insertText": "new_field = fields.Binary(string=\"Field_name\", )"
+    },
+     {
+      "documentation":  "Search",
+      "label": "oo_search",
+      "insertText": "self.search([('$1', '=', $2), ...], offset=0, limit=None, order=None, count=False)"
+    },
+     {
+      "documentation":  "Name search",
+      "label": "oo_search_name",
+      "insertText": "self.name_search(name='$1', args=None, operator='ilike', limit=100)"
+    },
+    {
+      "documentation":  "Compute method",
+      "label": "oo_method_compute",
+      "insertText": "@api.multi\n@api.depends(\"$field1\", \"$field2\", )\ndef _compute_$field(self):\n\tfor s in self:\n\t\t$pass}"
+    },
+     {
+      "documentation":  "Onchange method",
+      "label": "oo_onchange_method",
+      "insertText": "@api.onchange(\"$field1\", \"$field2\", )\ndef _onchange_$field(self):\n\tvals = {}\n\n\t# Remove warning if necessary\n\tvals['warning'] = {\n\t\t'title': _('$40')\n\t\t'message': _('$50')\n\t}\n\n\t# Remove domain if necessary\n\tvals['domain'] = {\n\t\t\"$field\": [(\"$61\", \"=\", $value)],\n\t}\n\n\treturn vals"
+    },
+    {
+      "documentation": "Constrains method" ,
+      "label": "oo_constrains_method",
+      "insertText": "@api.multi\n@api.constrains(\"$field1\", \"$field2\", )\ndef _check_$field(self):\n\tfor s in self:\n\t\tif s.$field == $value}:\n\t\t\traise ValidationError(_(\"$60\"))$70"
+    },
+     {
+ 
+      "documentation":  "Compute field",
+      "label": "odoo_field_compute",
+      "insertText": "$new_field = fields.$Float}(\n\tstring=\"$Field string}\",\n\tcompute='_compute_$new_field',\n\tinverse='_inverse_$new_field',\n\tsearch='_search_$new_field',\n\thelp=\"$50\",\n)\n\n@api.multi\n@api.depends(\"$field1\", \"field2\", )\ndef _compute_$new_field(self):\n\tfor s in self:\n\t\t$pass}\n\n@api.multi\ndef _inverse_$new_field(self):\n\tfor s in self:\n\t\t$pass}\n\n@api.multi\ndef _search_$new_field(self, operator, value):\n\tif operator == 'like':\n\t\toperator = 'ilike'\n\treturn [('$new_field', operator, value)]}"
+    } 
+     
+      
+       
+   
+]

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <record model='ir.ui.view' id='rozzi_ir_ui_view_add_monaco_edit'>
+            <field name='name'>增加monaco编辑器</field>
+            <field name='model'>ir.ui.view</field>
+            <field name="inherit_id" ref="base.view_view_form"/>
+        
+            <field name='arch' type='xml'>
+                <field name='arch_base' position="after">
+                      <div id="container" style="height:600px;border:0px solid grey"></div>  
+                      <script type="text/javascript" src="/rozzi_monaco_editor/static/src/js/monaco/min/vs/loader.js"></script>
+                      <script type="text/javascript" src="/rozzi_monaco_editor/static/src/js/editor_init.js"></script>
+                      
+                </field>
+            </field>
+        </record>
+
+          
+    </data>
+</openerp>
