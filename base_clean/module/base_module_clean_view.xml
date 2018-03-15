@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_base_module_clean" model="ir.ui.view">
+            <field name="name">Module Clean</field>
+            <field name="model">base.module.clean</field>
+            <field name="arch" type="xml">
+                <form string="Clean Module List">
+                    <field name="state" invisible="1"/>
+                    <separator string="Module Clean Result"/>
+                    <group states="init">
+                        <label string="Click on Clean below to start the process..." />
+                        <group>
+                            <field name="uninstall_self"/>
+                        </group>
+                    </group>
+                    <group states="done" >
+                        <field name="cleaned"/>
+                    </group>
+                    <footer>
+                        <div states="init">
+                            <button name="clean_module" string="Clean" type="object" class="btn-primary"/>
+                            <button special="cancel" string="Cancel" class="btn-default"/>
+                        </div>
+                        <div states="done">
+                            <button name="action_module_open" string="Open Apps" type="object" class="btn-primary"/>
+                            <button special="cancel" string="Close" class="btn-default"/>
+                        </div>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_view_base_module_clean" model="ir.actions.act_window">
+            <field name="name">Module Clean</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">base.module.clean</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem
+            name="Clean Apps List"
+            action="action_view_base_module_clean"
+            id="menu_view_base_module_clean"
+            groups="base.group_no_one"
+            parent="base.menu_management"
+            sequence="41"
+            icon="fa-exchange"/>
+
+    </data>
+</odoo>
