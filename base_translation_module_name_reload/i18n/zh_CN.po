@@ -1,0 +1,34 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* base_translation_module_name_reload
+#
+# Translators:
+# Jarvis <jarvis@odoomod.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20171007\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-27 13:40+0000\n"
+"PO-Revision-Date: 2017-11-27 13:40+0000\n"
+"Last-Translator: <jarvis@odoomod.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.base_translation_module_name_reload
+msgid "Base Translation Module Name Reload"
+msgstr "基础翻译模块名称重载"
+
+#. module: base_translation_module_name_reload
+#: model:ir.model,name:base_translation_module_name_reload.model_base_language_install
+msgid "Install Language"
+msgstr "安装语言"
+
+#. module: base_translation_module_name_reload
+#: model:ir.model.fields,field_description:base_translation_module_name_reload.field_base_language_install_reload_module_name
+msgid "Reload Module Name"
+msgstr "重载模块名称"
+
