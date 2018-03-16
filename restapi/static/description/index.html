@@ -1,0 +1,91 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan">The RESTful API that accesses Odoo using standard HTTP GET, PUT, POST, and DELETE methods and a simple JSON input and output format.</h3><br/>
+            <h3 class="oe_slogan">It uses both the <a href="http://odoo-restapi.readthedocs.io/en/latest/connection/logging_in/oauth1_authentication.html#oauth1-authentication">OAuth1</a> and <a href="http://odoo-restapi.readthedocs.io/en/latest/connection/logging_in/oauth2_authentication.html#oauth2-authentication">OAuth2</a> protocols to authenticate 3rd party applications.</h3>
+        </div>
+    </div>
+</section>
+<!-- Second block -->
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_padded">
+        <div class="oe_span12">
+            <h2 class="oe_slogan">The Odoo REST API endpoints can be used for a variety of purposes such as:
+</h2>
+        </div>
+        <div class="oe_span12"><br/>
+            <h3><strong>Odoo Version Information:</strong></h3><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/connection/logging_in/version_info.html#get--restapi-1.0-common-version">GET /restapi/1.0/common/version</a>
+            <h3><strong>Logging In:</strong></h3><br/>
+            - <strong>OAuth1 Authentication</strong><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/connection/logging_in/oauth1_authentication.html#post--restapi-1.0-common-oauth1-request_token">POST /restapi/1.0/common/oauth1/request_token <i>(Temporary Credential Request endpoint)</i></a><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/connection/logging_in/oauth1_authentication.html#get--restapi-1.0-common-oauth1-authorize">GET /restapi/1.0/common/oauth1/authorize <i>(Resource Owner Authorization endpoint)</i></a><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/connection/logging_in/oauth1_authentication.html#post--restapi-1.0-common-oauth1-access_token">POST /restapi/1.0/common/oauth1/access_token <i>(Token Credentials Request endpoint)</i></a><br/><br/>
+            - <strong>OAuth2 Authentication</strong><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/connection/logging_in/oauth2_authentication.html#get--restapi-1.0-common-oauth2-authorize">GET /restapi/1.0/common/oauth2/authorize <i>(Resource Owner Authorization endpoint)</i></a><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/connection/logging_in/oauth2_authentication.html#post--restapi-1.0-common-oauth2-access_token">POST /restapi/1.0/common/oauth2/access_token <i>(Token Credentials Request endpoint)</i></a><br/><br/>            
+            <h3><strong>Calling Methods:</strong></h3><br/>
+            - <strong>Check Access Rights</strong><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/check_access_rights.html#get--restapi-1.0-object-object_name-check_access_rights?operation=list_of_operations">GET /restapi/1.0/object/{object_name}/check_access_rights?operation={list_of_operations}</a><br/><br/>
+            - <strong>List Records</strong><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/list_records.html#get--restapi-1.0-object-object_name-search">GET /restapi/1.0/object/{object_name}/search</a><br/><br/>
+            - <strong>Count Records</strong><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/count_records.html#get--restapi-1.0-object-object_name-search_count">GET /restapi/1.0/object/{object_name}/search_count</a><br/><br/>
+            - <strong>Read Records</strong><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/read_records.html#get--restapi-1.0-object-object_name-id">GET /restapi/1.0/object/{object_name}/{id} <i>(Read Single Record)</i></a><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/read_records.html#get--restapi-1.0-object-object_name?ids=comma_separated_ids">GET /restapi/1.0/object/{object_name}?ids={comma_separated_ids} <i>(Read Record Set)</i></a><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/read_records.html#get--restapi-1.0-object-object_name-?domain=comma_separated_list_of_args">GET /restapi/1.0/object/{object_name}/?domain={comma_separated_list_of_args} <i>(Read Filter Records)</i></a><br/><br/>
+            - <strong>Listing Record Fields</strong><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/listing_record_fields.html#get--restapi-1.0-object-object_name-fields_get">GET /restapi/1.0/object/{object_name}/fields_get</a><br/><br/>
+            - <strong>Create Records</strong><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/create_records.html#post--restapi-1.0-object-object_name?vals=values_for_the_object's_fields">POST /restapi/1.0/object/{object_name}?vals={values_for_the_object's_fields}</a><br/><br/>
+            - <strong>Update Records</strong><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/update_records.html#put--restapi-1.0-object-object_name-id?vals=fields_and_values_to_update">PUT /restapi/1.0/object/{object_name}/{id}?vals={fields_and_values_to_update} <i>(Update Single Record)</i></a><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/update_records.html#put--restapi-1.0-object-object_name?ids=comma_separated_ids&vals=fields_and_values_to_update">PUT /restapi/1.0/object/{object_name}?ids={comma_separated_ids}&vals={fields_and_values_to_update} <i>(Update Record Set)</i></a><br/><br/>
+            - <strong>Delete Records</strong><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/delete_records.html#delete--restapi-1.0-object-object_name-id">DELETE /restapi/1.0/object/{object_name}/{id} <i>(Delete Single Record)</i></a><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/calling_methods/delete_records.html#delete--restapi-1.0-object-object_name?ids=comma_separated_ids">DELETE /restapi/1.0/object/{object_name}?ids={comma_separated_ids} (Delete Record Set)</a><br/><br/>
+            <h3><strong>Workflow Manipulations:</strong></h3>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/workflow_manipulations/workflow_manipulations.html#get--restapi-1.0-workflow-object_name-id-signal">GET /restapi/1.0/workflow/{object_name}/{id}/{signal}</a><br/><br/>
+            <h3><strong>Report Printing:</strong></h3>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/report_printing/report_printing.html#get--restapi-1.0-report-report_name-id">GET /restapi/1.0/report/{report_name}/{id} <i>(Print Single Report)</i></a><br/>
+                <a href="http://odoo-restapi.readthedocs.io/en/latest/report_printing/report_printing.html#get--restapi-1.0-report-report_name?ids=comma_separated_ids">GET /restapi/1.0/report/{report_name}?ids={comma_separated_ids} <i>(Print Report Set)</i></a><br/><br/>
+            <h3><strong>Inspection and Introspection:</strong></h3>
+                - <a href="http://odoo-restapi.readthedocs.io/en/latest/inspection_and_introspection/inspection_and_introspection.html#ir-model">Provides information about Odoo models via its various fields <i>(ir.model)</i></a><br/>
+                - <a href="http://odoo-restapi.readthedocs.io/en/latest/inspection_and_introspection/inspection_and_introspection.html#ir-model-fields">Provides information about the fields of Odoo models and allows adding custom fields without using Python code <i>(ir.model.fields)</i></a>
+        </div>
+    </div>
+</section>
+<!--Third block -->
+<section class="oe_container">
+    <div class="oe_row oe_padded">
+        <div class="oe_span12">
+            <h2 class="oe_slogan">API Quick Reference Guide</h2>
+        </div>
+        <div class="oe_span12">
+            <p class="oe_mt32 oe_centeralign">
+		      <a href="http://odoo-restapi.readthedocs.io">Click Here</a> for a quick reference guide to use the odoo REST API.</a>
+            </p>
+        </div>
+    </div>
+</section>
+<!--Forth block -->
+<section class="oe_container">
+    <div class="oe_row oe_padded">
+        <div class="oe_span12">
+            <h2 class="oe_slogan">Contact / Support</h2>
+            <h3 class="oe_slogan">Need help or want extra features?</h3>
+        </div>
+	<div class="oe_span6">
+            <div class="oe_picture">
+                    <a href="http://www.synconics.com"><img src="logo.png"></a>
+            </div>
+        </div>
+	<div class="oe_span6">
+            <p class="oe_mt32">
+		Need help with the configuration or want this module to have more functionalities?
+		Contact us through e-mail at <a href="mailto:contact@synconics.com">contact@synconics.com</a>
+            </p>
+        </div>
+    </div>
+</section>

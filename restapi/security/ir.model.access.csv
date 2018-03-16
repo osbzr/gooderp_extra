@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_auth_request_token,access_auth_request_token,model_auth_request_token,,1,1,1,0
+access_auth_auth,access_auth_auth,model_auth_auth,,1,1,1,0
+access_redirect_uri,access_redirect_uri,model_redirect_uri,,1,1,1,0
+access_auth_auth_code,access_auth_auth_code,model_auth_auth_code,,1,1,1,0
+access_auth_access_token,access_auth_access_token,model_auth_access_token,,1,1,1,0
