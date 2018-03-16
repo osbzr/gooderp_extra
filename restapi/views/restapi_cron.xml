@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="ir_cron_restapi_request_token" model="ir.cron">
+            <field name="name">Remove Request Tokens</field>
+            <field eval="True" name="active"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True"/>
+            <field name="model">auth.request.token</field>
+            <field name="function">request_token_cron</field>
+            <field name="args"></field>
+        </record>
+
+        <record id="ir_cron_restapi_access_token" model="ir.cron">
+            <field name="name">Remove Access Tokens</field>
+            <field eval="True" name="active"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True"/>
+            <field name="model">auth.access.token</field>
+            <field name="function">access_token_cron</field>
+            <field name="args"></field>
+        </record>
+	</data>
+</odoo>

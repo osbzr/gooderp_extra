@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Create a partner, that is also a portal user -->
+        <record id="partner_auth_portal" model="res.partner">
+            <field name="name">Auth Portal User</field>
+            <field name="email">auth@synconics.com</field>
+            <field name="supplier" eval="False"/>
+            <field name="customer" eval="True"/>
+            <field name="notify_email">none</field>
+        </record>
+        <record id="auth_user0" model="res.users" context="{'no_reset_password': True}">
+            <field name="partner_id" ref="partner_auth_portal"/>
+            <field name="login">auth</field>
+            <field name="password">auth</field>
+            <field name="signature"><![CDATA[<span>--<br/>
+Mr Auth Portal</span>]]></field>
+            <field name="groups_id" eval="[(4,ref('base.group_portal'))]"/>
+        </record>
+        <record id="auth_auth_portal" model="auth.auth">
+            <field name="name">Auth Portal Credential</field>
+            <field name="description">Auth Portal Credential Details</field>
+            <field name="organization_name">Synconics Technologies Pvt. Ltd</field>
+            <field name="organization_website">www.synconics.com</field>
+            <field name="privacy_policy_url">Privacy Policy URL</field>
+            <field name="terms_service_url">Terms Service URL</field>
+            <field name="user_id" ref="auth_user0"/>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="auth_rule" model="ir.rule">
+            <field name="name">See Own OAuth</field>
+            <field ref="model_auth_auth" name="model_id"/>
+            <field name="domain_force">[('user_id','=',user.id)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+    </data>
+</odoo>
