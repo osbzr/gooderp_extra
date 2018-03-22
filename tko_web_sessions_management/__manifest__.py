@@ -12,7 +12,6 @@
     'version': '10.0.0.0.0',
     'application': False,
     'installable': True,
-    'auto_install': True,
     'depends': [
                 'base',
                 'resource',
