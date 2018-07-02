@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_backend" name="navybitss_kanban_draggable" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/kanban_draggable/static/src/js/kanban_view.js"/>
+            <script type="text/javascript" src="/kanban_draggable/static/src/js/kanban_column.js"/>
+        </xpath>
+    </template>
+</odoo>
