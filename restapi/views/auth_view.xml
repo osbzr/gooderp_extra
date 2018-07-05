@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>        
+        <record id="view_auth_auth_form" model="ir.ui.view">
+            <field name="name">auth.auth.form</field>
+            <field name="model">auth.auth</field>
+            <field name="arch" type="xml">
+                <form string="Authentication">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box" style="width:800px">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <h1 class="oe_title">
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <field name="description" placeholder="Descriptions..."/>
+                        <group>
+                            <group string="Organization">
+                                <field name="organization_name" string="Name"/>
+                                <field name="organization_website"/>
+                            </group>
+                            <group string="Policy">
+                                <field name="privacy_policy_url"/>
+                                <field name="terms_service_url"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Key and Secret">
+                                <group>
+                                    <group>
+                                        <field name="consumer_key" readonly="1" string="Consumer Key(API key)"/>
+                                        <field name="consumer_secret" readonly="1" string="Consumer Secret(API Secret)"/>
+                                    </group>
+                                    <group></group>
+                                </group>
+                                <button name="update_key_secret" type="object" string="Regenerate Consumer key and Secret" class="oe_highlight"/>
+                                <separator/>
+                            </page>
+                            <page string="OAuth1 Access Token and Endpoints">
+                                <group string="Access Tokens">
+                                    <field name="access_token" readonly="1"/>
+                                    <field name="access_token_secret" readonly="1"/>
+                                </group>
+                                <group string="Request Tokens" invisible="1">
+                                    <field name="request_token_ids" nolabel="1" readonly="1">
+                                        <tree>
+                                            <field name="request_token"/>
+                                            <field name="request_token_validity"/>
+                                            <field name="auth_id" invisible="1"/>
+                                            <field name="callback_uri"/>
+                                            <field name="token_verifier"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <button string="Regenerate My Access Tokens and Token Secret" type="object" name="generate_access" class="oe_highlight"/>
+                                <button string="Revoke Access Token" type="object" name="revoke_access"/>
+
+                                <separator colspan="4" string="Endpoints"/>
+                                <group col="4" colspan="4">
+                                    <label align="0.0" string="/restapi/1.0/common/oauth1/request_token"/>
+                                    <newline/>
+                                    <label align="0.0" string="/restapi/1.0/common/oauth1/authorize"/>
+                                    <newline/>
+                                    <label align="0.0" string="/restapi/1.0/common/oauth1/access_token"/>
+                                </group>
+                            </page>
+                            <page string="OAuth2 Access Token and Endpoints">
+                                <group>
+                                    <field name="refresh_token" readonly="1"/>
+                                </group>
+                                <group string="Authorize Redirect URLs">
+                                    <field name="redirect_uris" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="url"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Authorization Code" invisible="1">
+                                    <field name="auth_code_ids" nolabel="1" readonly="1">
+                                        <tree>
+                                            <field name="auth_code"/>
+                                            <field name="used"/>
+                                            <field name="auth_id" invisible="1"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Access Tokens">
+                                    <field name="access_token_ids" nolabel="1" readonly="1">
+                                        <tree create="false" unlink="true">
+                                            <field name="access_token"/>
+                                            <field name="access_token_validity"/>
+                                            <field name="auth_id" invisible="1"/>
+                                        </tree>
+                                        <form>
+                                            <group>
+                                                <group>
+                                                    <field name="access_token"/>
+                                                </group>
+                                                <group>
+                                                    <field name="access_token_validity"/>
+                                                    <field name="auth_id" invisible="1"/>
+                                                </group>
+                                            </group>
+                                        </form>
+                                    </field>
+                                </group>
+
+                                <button string="Regenerate Refresh Token" type="object" name="generate_refresh" class="oe_highlight"/>
+                                <button string="Revoke Refresh Token" type="object" name="revoke_refresh"/>
+                                <separator colspan="4" string="Endpoints"/>
+                                <group col="4" colspan="4">
+                                    <newline/>
+                                    <label align="0.0" string="/restapi/1.0/common/oauth2/authorize"/>
+                                    <newline/>
+                                    <label align="0.0" string="/restapi/1.0/common/oauth2/access_token"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_auth_auth_tree" model="ir.ui.view">
+            <field name="name">auth.auth.tree</field>
+            <field name="model">auth.auth</field>
+            <field name="arch" type="xml">
+                <tree string="Auth">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="user_id"/>
+                    <field name="consumer_key" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_auth_auth_search" model="ir.ui.view">
+            <field name="name">auth.auth.search</field>
+            <field name="model">auth.auth</field>
+            <field name="arch" type="xml">
+                <search string="Auths">
+                    <filter string="InActive" domain="[('active', '=', False)]" />
+                    <group expand="0" string="Group By">
+                        <filter string="Users" context="{'group_by': 'user_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_auth_auth" model="ir.actions.act_window">
+            <field name="name">Authentication</field>
+            <field name="res_model">auth.auth</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_auth_auth_tree"/>
+            <field name="domain">[('user_id', '=', uid )]</field>
+            <field name="search_view_id" ref="view_auth_auth_search"/>
+        </record>
+
+        <record model="ir.actions.server" id="action_update_key_secret">
+            <field name="name">Update Key &amp; Secret </field>
+            <field name="model_id" ref="restapi.model_auth_auth"/>
+            <field name="code">
+                if context.get('active_model') == 'auth.auth' and context.get('active_ids'):
+                    self.pool['auth.auth'].update_key_secret(cr, uid, context['active_ids'], context=context)
+            </field>
+        </record>
+        <record model="ir.values" id="values_action_update_key_secret">
+            <field name="model_id" ref="restapi.model_auth_auth" />
+            <field name="name">Update Key &amp; Secret</field>
+            <field name="value" eval="'ir.actions.server,' +str(ref('action_update_key_secret'))" />
+            <field name="key2">client_action_relate</field>
+            <field name="key">action</field>
+            <field name="model">auth.auth</field>
+        </record>
+
+        <record id="view_users_form" model="ir.ui.view">
+            <field name="name">res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='toggle_active']" position="after">
+                    <button string="Authentication" type="action" class="oe_stat_button" icon="fa-bars" name="%(restapi.action_auth_auth)d"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_users_form_simple_modif" model="ir.ui.view">
+            <field name="name">res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+            <field name="arch" type="xml">
+                <xpath expr="//h1" position="before">
+                    <button string="Authentication" type="action" icon="fa-bars" name="%(restapi.action_auth_auth)d"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
